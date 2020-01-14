@@ -1,9 +1,12 @@
 #include<iostream>
+#include <string>
+#include <sstream>
 #include<cstdlib>
 using namespace std;
 
 int wybor;
 int x, y; 
+short pesel;
 
 int main()
 {
@@ -37,7 +40,8 @@ switch(wybor)
 	case 2:
 		{
 			cout << "Podaj swoj numer pesel: " << endl;
-				
+			cin >> pesel;
+			cout << "Twoj numer pesel to: "	<< pesel << endl;
 		}		
 }
 
