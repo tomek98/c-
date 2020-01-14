@@ -11,7 +11,8 @@ cout << "MENU GLOWNE" << endl;
 cout << "Tomasz Wojtarowicz" <<endl;
 cout << "-------------------" <<endl;
 cout << "1. Zmiana na duze litery" <<endl;
-cout << "Wybierz literê: ";
+cout << "2. Numer Pesel" <<endl;
+cout << "Wybierz cyfre: ";
 cin  >> wybor;
 
 switch(wybor)
@@ -32,6 +33,12 @@ switch(wybor)
 	
 			cout<<endl;
 			}
+	
+	case 2:
+		{
+			cout << "Podaj swoj numer pesel: " << endl;
+				
+		}		
 }
 
 
