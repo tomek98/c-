@@ -188,73 +188,73 @@ void PhoneBook::List()
      }
 }
 
-PhoneBook dane;
+//PhoneBook dane;
 
-void PhoneBook::ListSort()
-{    
-    int tc = 0;
-    int counter = GetSize();
-    string ts[counter][5];
-    
-    for(int i=0;i<MAX;i++)
-    {
-            if(ID[i] == 1)
-            {
-                    ts[tc][0] = surname[i];
-                    ts[tc][1] = name[i];
-                    ts[tc][2] = city[i];
-                    ts[tc][3] = address[i];
-                    ts[tc][4] = pNumber[i];
-                    tc++; 
-            }
-    }
-    
-    for (int i = counter - 1; i > 0; i--)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            string p1 = ts[j][0];
-            string d1 = ts[j + 1][0];
-                    
-            string p2 = ts[j][1];
-            string d2 = ts[j + 1][1];
-            
-            string p3 = ts[j][2];
-            string d3 = ts[j + 1][2];
-            
-            string p4 = ts[j][3];
-            string d4 = ts[j + 1][3];
-            
-            string p5 = ts[j][4];
-            string d5 = ts[j + 1][4];
-                    
-            if (p1 > d1)
-            {
-                ts[j][0] = d1;
-                ts[j + 1][0] = p1;
-                
-                ts[j][1] = d2;
-                ts[j + 1][1] = p2;
-                
-                ts[j][2] = d3;
-                ts[j + 1][2] = p3;
-                
-                ts[j][3] = d4;
-                ts[j + 1][3] = p4;
-                
-                ts[j][4] = d5;
-                ts[j + 1][4] = p5;
-            }
-        }
-    }
-    
-    for(int i=0;i<counter;i++)
-    {
-            cout << ts[i][0] << "\t" << ts[i][1] << "\t" << ts[i][2] << "\t" << ts[i][3] << "\t" << ts[i][4] << "\t" << endl;
-    }
-    
-    getch();
-}
+//void PhoneBook::ListSort()
+//{    
+//    int tc = 0;
+//    int counter = GetSize();
+//    string ts[counter][5];
+//    
+//    for(int i=0;i<MAX;i++)
+//    {
+//            if(ID[i] == 1)
+//            {
+//                    ts[tc][0] = surname[i];
+//                    ts[tc][1] = name[i];
+//                    ts[tc][2] = city[i];
+//                    ts[tc][3] = address[i];
+//                    ts[tc][4] = pNumber[i];
+//                    tc++; 
+//            }
+//    }
+//    
+//    for (int i = counter - 1; i > 0; i--)
+//    {
+//        for (int j = 0; j < i; j++)
+//        {
+//            string p1 = ts[j][0];
+//            string d1 = ts[j + 1][0];
+//                    
+//            string p2 = ts[j][1];
+//            string d2 = ts[j + 1][1];
+//            
+//            string p3 = ts[j][2];
+//            string d3 = ts[j + 1][2];
+//            
+//            string p4 = ts[j][3];
+//            string d4 = ts[j + 1][3];
+//            
+//            string p5 = ts[j][4];
+//            string d5 = ts[j + 1][4];
+//                    
+//            if (p1 > d1)
+//            {
+//                ts[j][0] = d1;
+//                ts[j + 1][0] = p1;
+//                
+//                ts[j][1] = d2;
+//                ts[j + 1][1] = p2;
+//                
+//                ts[j][2] = d3;
+//                ts[j + 1][2] = p3;
+//                
+//                ts[j][3] = d4;
+//                ts[j + 1][3] = p4;
+//                
+//                ts[j][4] = d5;
+//                ts[j + 1][4] = p5;
+//            }
+//        }
+//    }
+//    
+//    for(int i=0;i<counter;i++)
+//    {
+//            cout << ts[i][0] << "\t" << ts[i][1] << "\t" << ts[i][2] << "\t" << ts[i][3] << "\t" << ts[i][4] << "\t" << endl;
+//    }
+//    
+//    getch();
+//}
 
 int PhoneBook::GetSize()
 {
@@ -278,7 +278,7 @@ int main()
     {
         string bName;
         cout << "===================================================" << endl;
-        cout << "Baza danych" << endl;
+        cout << "Baza danych teleadresowych" << endl;
         cout << "===================================================";
         cout << endl << endl;
         cout << "Podaj nazwe dla nowej bazy danych: "; cin >> bName; 
@@ -303,6 +303,7 @@ int main()
     cout << "===================================================" << endl;
     cout << "Pojemnosc bazy: " << MAX << ", zajetych: " << stats << ", wolnych: " << MAX - stats << endl;
     cout << "===================================================" << endl;
+    cout << "Autor: Krzysztof Wa³êska" << endl << endl;
     cout << "Twoj wybor: "; cin >> choice;
     
     switch(choice)
@@ -453,4 +454,3 @@ void LoadData()
     
     dload.close();
 }
-
